@@ -171,7 +171,7 @@ header nav .profile-image img{
     display: flex;
     width: 100%;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 15%;
    
    
 }.grid-container .center{
@@ -340,4 +340,7 @@ width: 100%;
 }
 i:hover{
 cursor: pointer;
+}
+@media screen and (max-width:945px){
+    
 }
