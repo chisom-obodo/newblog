@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins"; */
+   
+}
+ body{
+    background-color: rgb(225, 220, 220);
+    
+}
+header{
+    background-color: rgb(13, 8, 77);
+    padding: 10px 20px;
+}
+header nav{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+header nav ul{
+   display: flex;
+   justify-content: space-between;
+   width: 40%;
+   align-items: center;
+   position: relative;
+}
+header nav ul li{
+    list-style: none; 
+    position: relative;
+}
+header nav ul li a{
+    color: #fff;
+    text-decoration: none; 
+}
+header nav ul li a:hover{
+    text-decoration: none;
+    transition: all .3s ease-in-out; 
+}
+header nav ul li ul{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color:rgb(13, 8, 77) ;
+    width: 220%;
+    top: 100%;
+    
+
+}
+header nav ul li.first-drop:hover > ul{
+    display: block;
+    
+}
+header nav ul li ul li a{
+    width: 100%;
+    padding: 10px 20px;
+    display: inline-block;
+}
+header nav ul li.first-drop:hover > ul li:hover{
+    background-color: yellowgreen;
+    width: 100%;
+}
+header nav ul li.first-drop:hover ul li.second-drop > ul{
+    display:block;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    background-color:rgb(13, 8, 77) ;
+}
+header nav ul li ul li ul li{
+  display: none;
+}
+header nav ul li ul li:hover ul li{
+    display: block;
+}
+
+header nav .logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(69, 212, 69);
+}
+header nav .profile-image img{
+    border-radius: 50%;
+}
+.grid-container{
+    display: grid;
+    gap: 1rem;
+    padding: 0.8rem;
+    /* grid-template-areas: "hd hd hd hd hd hd hd hd "
+    "bd bd bd bd bd bd bd bd "
+    "cd cd cd cd cd cd cd cd cd cd ed ed ed"
+    "fd fd fd fd fd gd gd gd gd gd gd ";
+    width: 80%; */
+    grid-template-columns: repeat(4, 3fr);
+    grid-template-rows: repeat(4, 9rem);
+}
+.grid-container .post{
+    grid-area: column start;
+    background-color:rgb(246, 239, 239);
+    /* grid-column: span 1; */
+    padding: 0.2rem;
+    border-radius: 10px;
+    
+}
+.one-content{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.emoji{
+     padding: 10px;
+     display: flex;
+     height: 100px;
+     align-items: flex-end;
+     justify-content: space-between;
+     width: 40%;
+     
+}
+.emoji a{
+     display: flex;
+     justify-content: space-between;
+     width: 60%;
+     text-decoration: none;
+     color: #000;
+}
+.button{
+  display: flex;
+  align-items: flex-end;
+}
+ .button button{
+     background-color: rgb(13, 8, 77);
+     width: 4rem;
+     margin-bottom: 1em;
+     color: white;
+ }
+ .button button:hover{
+     cursor: pointer;
+ }
+.grid-container .feed{
+    background-color:rgb(246, 239, 239);
+    grid-row: 2 / span 3;
+    padding: 10px;
+    border-radius: 10px;
+}
+.feed-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.feed-image{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    justify-content: space-around;
+    padding: 5%;    
+}
+.bttom{
+    margin-top: 15px;
+    border-bottom: 1px solid gray;
+    line-height: 1.2rem;
+}
+
+.feed .reactions{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 25%;
+   
+   
+}.grid-container .center{
+background-color:rgb(246, 239, 239);
+grid-column: 2 / span 2 ;
+grid-row: span 3;
+border-radius: 10px;
+width: 100%;
+}
+.center .link{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.center .link .link-image{
+    max-width: 100%;
+}
+.center .link .link-image img{
+    width: 100%;
+
+}
+.center-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 0.5rem;
+}
+
+.grid-container .aside{
+    background-color:rgb(246, 239, 239);
+    grid-row:span 4 ;
+    border-radius: 10px;
+}
+.grid-container .aside aside{
+    padding: 10px;
+
+}
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    /* transition: background-color 0.3s; */
+}
+
+.suggestion-item:hover {
+    background-color: #f9f9f9;
+}
+
+.suggestion-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggestion-info {
+    flex: 1;
+}
+
+.suggestion-title {
+        margin: 0;
+        font-size: 1em;
+        font-weight: bold;
+}
+
+.suggestion-subtitle {
+    margin: 0;
+    font-size: 0.9em;
+    color: grey;
+}
+
+.add-button {
+    background-color: rgb(13, 8, 77);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* transition: background-color 0.3s; */
+}
+
+.add-button:hover {
+    background-color: rgb(69, 212, 69);
+}
+.suggestions-list .see-more{
+    width: 100%;
+    display: flex;
+    margin-top: 20%;
+    height: 2rem;
+}
+.suggestions-list .see-more button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(13, 8, 77);
+    color: white;
+}
+.suggestions-list .see-more button:hover{
+    cursor: pointer;
+    transition: all.3s ease-in-out;
+    color: greenyellow;
+}
+.grid-container .below{
+    background-color:rgb(246, 239, 239);
+    grid-column: span 2;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 100%;
+}
+.fifth-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 90%;
+    
+
+}
+
+.fifth-section img,
+.feed-section .image,
+.center-section .image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.section-details {
+    flex: 1;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.user-job {
+    margin: 0;
+    font-size: 0.9em;
+    color: grey;
+}
+
+.time {
+    font-size: 0.9em;
+    color: grey;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+}
+i:hover{
+cursor: pointer;
+}
